@@ -3,13 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 import { adminAuthenticated, userAuthenticated } from '@router/config/routes'
 import { Flex } from '@components/others'
 import styled from 'styled-components'
-import DashboardLayout from '@layout/DashboardLayout'
-import { useSelector } from 'react-redux'
-import { selectCurrentUserRole } from '@modules/Auth/authSlice'
 import { userRolesConfig } from '@router/config/roles'
+import AdminLayout from '@layout/ZingfogAdminLayout/AdminLayout'
 
-const PageFlex = styled(Flex)`
-  overflow: hidden;
+const PageFlex = styled.div`
 `
 const AuthPage = ({ isAuthenticated }) => {
 
@@ -28,7 +25,7 @@ const AuthPage = ({ isAuthenticated }) => {
     return (
         <PageFlex>
             {isAuthenticated && (
-                <DashboardLayout>
+                <AdminLayout>
                     <Routes>
                         {authRoutePages.map(({ routePath, Component }) => {
                             return (
@@ -40,7 +37,7 @@ const AuthPage = ({ isAuthenticated }) => {
                             )
                         })}
                     </Routes>
-                </DashboardLayout>
+                </AdminLayout>
             )}
         </PageFlex>
     )

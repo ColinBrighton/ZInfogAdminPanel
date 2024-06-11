@@ -1,5 +1,3 @@
-// (Mention API Names on page)
-const GETEXAMPLE = 'example/'; // ( Mention request )
 
 // =======  Auth Start ======
 const LOGIN = 'login'; // ( Auth Login Post)
@@ -10,7 +8,4 @@ const LOGIN = 'login'; // ( Auth Login Post)
 export const APIURLS = {
     // Auth 
     LOGIN,   // --> Auth Login Post
-
-    // Example
-    GETEXAMPLE,  //  --> Example
 }

@@ -4,6 +4,7 @@ import Label from '@components/form/Label'
 import { Fragment } from 'react';
 import { Styles } from '@components/form/CommonProperties'
 import { THEME } from '@theme/index';
+import { CALENDER } from '@assets/images';
 
 
 const dateFormat = 'YYYY-MM-DD';
@@ -118,7 +119,7 @@ const CustomDatePicker = ({
       <AntdDatePickerStyle 
       placeholder={placeholder} 
       disabled={disabled} 
-      // suffixIcon={<img src={SvgIcons.Calender} alt='calernder' style={{ pointerEvents: 'none' }} />} 
+      suffixIcon={<img src={CALENDER} alt='calernder' style={{ pointerEvents: 'none' }} />} 
       name={name} 
       value={value} 
       onChange={handleChange} />

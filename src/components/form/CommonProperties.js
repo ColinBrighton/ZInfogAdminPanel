@@ -1,23 +1,23 @@
 import { THEME } from "@theme/index";
 
 export const Styles= {
-    LableSize:'16px',
+    LableSize:'14px',
     LableWeight:'500',
     LableColor:THEME.black,
     LableSpace:'0.01em', // 0.01em
-    InputSize:'16px',
+    InputSize:'14px',
     InputWeight:'500',
     InputColor:THEME.black,
-    InputPlaceholderSize:'16px',
+    InputPlaceholderSize:'14px',
     InputPlaceholderWeight:'500',
     InputPlaceholderColor:THEME.gray,
-    Height:'50px',
+    Height:'40px',
     BtnHeight:'50px',
     BtnSize:'18px',
     BtnSpace:'0.01em', // 0.01em
     BtnWeight:'600',
     errorColor:THEME.red,
-    errorFontSize:'14px', // 14px
+    errorFontSize:'12px', // 14px
     errorFontWeight:'500',
     // ---- CheckBox
     checkBoxHeight:'20px',

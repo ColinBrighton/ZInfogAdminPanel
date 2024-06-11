@@ -3,13 +3,13 @@ import GlobalStyle from "@theme/GlobalStyle"
 import { useLocation } from "react-router-dom"
 import Routers from "./router"
 import { useSelector } from "react-redux"
-import { selectCurrentToken } from "@modules/Auth/authSlice"
+import { selectCurrentUser } from "@modules/Auth/authSlice"
 
 function App() {
 
   const location = useLocation()
 
-  const token = useSelector(selectCurrentToken);
+  const token = useSelector(selectCurrentUser);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0)

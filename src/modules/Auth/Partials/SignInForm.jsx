@@ -3,14 +3,19 @@ import styled from 'styled-components'
 import { Col, Form, Input } from 'antd'
 import { CustomRow, Flex } from '@components/others'
 import { Button, CustomInput, CustomInputPassword } from '@components/form'
+import { THEME } from '@theme/index'
 
-const InputWrapper = styled.div`
-  padding-bottom: 25px;
 
-`
 const Header = styled.div`
   color:#fff;
-  margin-bottom:20px;
+  margin-bottom:10px;
+`
+const ResetText = styled.p`
+  color:${THEME.black};
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
 `
 
 
@@ -19,8 +24,15 @@ const SignInForm = ({ handleSignIn }) => {
   const [form] = Form.useForm();
 
   const onFinish = values => {
-    handleSignIn(values)
-    // form.resetFields();
+
+    const onFinishValues = {
+      ...values,
+      client_id: 'ei0gvH1bk8wNVj0xqKgtGVzxa3yWXa',
+      client_secret: "Yjq2KXplGi6Niarcp1gn6PP7OrMDlP",
+      grant_type: "client_credentials"
+    }
+
+    handleSignIn(onFinishValues)
   }
 
   return (
@@ -36,23 +48,25 @@ const SignInForm = ({ handleSignIn }) => {
 
       <Flex center={'true'}>
         <Header>
-          <h1 style={{ fontSize: '30px', }}>Login</h1>
+          <p style={{ fontSize: '24px', fontWeight: 400, color: THEME.primary_color_dark }}>Login</p>
         </Header>
       </Flex>
 
-      <CustomRow space={[24, 24]}>
+      <CustomRow space={[12, 12]}>
         <Col span={24}>
           <CustomInput
-            name="email"
-            placeholder={'Enter your Email'}
+            name="user_name"
+            label={'Uername'}
+            placeholder={'Enter your Username'}
             rules={[
-              { required: true, message: 'Please enter your email address' },
+              { required: true, message: 'Please enter username' },
             ]} />
         </Col>
 
         <Col span={24}>
           <CustomInputPassword
             name="password"
+            label={'Password'}
             placeholder={'Enter your Password'}
             rules={[
               { required: true, message: 'Please enter a password' },
@@ -60,8 +74,11 @@ const SignInForm = ({ handleSignIn }) => {
         </Col>
 
       </CustomRow>
-      <Flex center={'true'} gap={'20px'} margin={'20px 0'}>
-        <Button.Primary text={'Login'} htmlType="submit" />
+      <Flex center={'true'} margin={'10px 0'}>
+        <Button.Primary text={'SUBMIT'} htmlType="submit" />
+      </Flex>
+      <Flex center={'true'} >
+        <ResetText>Reset Password</ResetText>
       </Flex>
 
     </Form>

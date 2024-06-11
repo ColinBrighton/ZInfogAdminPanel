@@ -15,7 +15,7 @@ export const Example = () => {
 
   return (
     <Fragment>
-      <CustomPageTitle Heading={'Company'} PreviousPage={PreviousPage}/>
+      {/* <CustomPageTitle Heading={'Company'} PreviousPage={PreviousPage}/> */}
       <ExampleContainer />
     </Fragment>
   )

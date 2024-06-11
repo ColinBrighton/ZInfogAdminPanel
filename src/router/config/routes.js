@@ -3,6 +3,7 @@ import PageNotFound from "@router/components/PageNotFound"
 import UserSignin from "@modules/Auth/Partials/UserSignin"
 import { Example } from "@modules/Example"
 import { Profile } from "@modules/Profile"
+import Home from "@modules/Home/Home"
 
 export const anonymous = [
     {       
@@ -17,14 +18,6 @@ export const anonymous = [
         routePath: '/signin',  // ----------- Signin Page
         Component: UserSignin,
     },
-    // {
-    //     routePath: '/register',
-    //     Component: RegisterMenu,
-    // },
-    // {
-    //     routePath: '/password',
-    //     Component: PasswordForm,
-    // },
 ]
 
 export const adminAuthenticated = [
@@ -37,8 +30,8 @@ export const adminAuthenticated = [
         Component: NetWorkError,
     },
     {
-        routePath:'',  // ----------- Dashboard
-        Component:Example, 
+        routePath:'/',  // ----------- Dashboard
+        Component:Home, 
     }
 ]
 

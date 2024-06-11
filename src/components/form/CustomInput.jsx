@@ -11,7 +11,9 @@ const StyledItem = styled(Item)`
     width: 100%;
     text-align: left;
   }
-
+  .ant-form-item-label >label {
+    width:100%;
+  }
   border-radius: 0.4rem;
   margin-bottom: 5px !important;
 `

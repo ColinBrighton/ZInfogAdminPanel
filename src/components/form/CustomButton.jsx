@@ -65,52 +65,45 @@ const dangerButtonStyles = css`
   }
 `
 const secondaryButtonStyles = css`
-  background-color: ${THEME.PRIMARY_PURPLE};
-  border-color: ${THEME.PURPLE_T_80};
-  color: '#FFFFFF';
+  background: #1F6CAB;
+  color:#FFFFFF;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-  &:hover {
+  /* &:hover {
     background-color: ${THEME.PRIMARY_PURPLE};
     border-color: ${THEME.PURPLE_T_80};
   }
   &:focus {
     background-color: ${THEME.PRIMARY_PURPLE};
     border-color: ${THEME.PURPLE_T_80};
-  }
+  } */
 `
 
 const primaryButtonStyles = css`
   /* color:${THEME.PRIMARY}; */
-  color: ${THEME.primary_2} !important;
-  background-color:#fff;
-  border-color:${THEME.primary_2};
-  &:hover {
+  color: ${THEME.white} !important;
+  background-color:${THEME.primary};
+  /* &:hover {
     color:#fff !important;
-    /* background-color: ${THEME.PRIMARY} !important; */
     background-color: ${THEME.primary_2} !important;
-    /* border-color: ${THEME.PRIMARY}; */
-    border-color: ${THEME.primary_2}!important;
   }
   &:focus {
     box-shadow:0 0 0 .2rem rgba(0,123,255,.5)
-  }
+  } */
 `
 
 const yellowButtonStyles = css`
   color:${THEME.white};
-  background-color:${THEME.dark_gold};
-  border-color:${THEME.dark_gold};
-  box-shadow:${THEME.button_box_shadow};
-  font-size:1rem;
+  background-color:#F46C09;
+  /* font-size:1rem;
   font-weight:600;
-  transition:.4s;
-  &:hover {
+  transition:.4s; */
+  /* &:hover {
     transform:translateY(-5px);
     box-shadow:${THEME.buttonHover_box_shadow};
   }
   &:focus {
     box-shadow:0 0 0 .2rem (255, 179, 2,.5)
-  }
+  } */
 `
 
 const successButtonStyles = css`
@@ -145,7 +138,7 @@ const PlainButton = styled(AntdButton)`
   text-transform:capitalize;
   /* font-weight:600; */
   padding: 0px 15px !important;
-  margin: 0px 15px 8px 0px !important;
+  /* margin: 0px 15px 8px 0px !important; */
   font-weight:400;
   cursor: ${props => props?.disableCursor && 'not-allowed'};
   pointer-events: ${props => (props?.disable ? 'none' : 'auto')};
@@ -208,8 +201,8 @@ const SecondaryNow = ({ text, icon, ...props }) => (
 )
  
 const Yellow = ({ text, icon, ...props }) => (
-    <PlainButton {...props} type="yellow">
-        <Flex style={{alignItems:"center"}}>
+    <PlainButton {...props} type="yellow" >
+        <Flex style={{alignItems:"center"}} gap={'10px'}>
             {icon}
             <TextContainer icon={icon ? "true" : "false"}>{text}</TextContainer>
         </Flex>
@@ -218,7 +211,7 @@ const Yellow = ({ text, icon, ...props }) => (
 
 const Secondary = ({ text, icon, ...props }) => (
     <PlainButton {...props} type="secondary">
-        <Flex style={{alignItems:"center"}}>
+        <Flex style={{alignItems:"center"}} gap={'10px'}>
             {icon}
             <TextContainer icon={icon ? "true" : "false"}>{text}</TextContainer>
         </Flex>

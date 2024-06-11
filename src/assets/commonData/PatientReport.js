@@ -1,0 +1,65 @@
+export const reports = [
+    {
+        id:1,
+        orderNo:'A19023',
+        date:'01/05/2023',
+        patientName:'Sankaranarayanan',
+        hospitalId:'DH2023/0001245',
+        testName:'Anti Leukemia 1 Serum ',
+        doctorName:'Dr. Arun K Thambi',
+        eta:'03/05/2023',
+        status:'Ready',
+        tag:'success',
+    },
+    {
+        id:2,
+        orderNo:'A19024',
+        date:'01/05/2023',
+        patientName:'Baby. Alan',
+        hospitalId:'DH2023/0001242',
+        testName:'Anti Leukemia 1 Serum ',
+        doctorName:'Dr. Abdul Siddique',
+        eta:'03/05/2023',
+        status:'Partial Report',
+        tag:'warning',
+    },
+    {
+        id:3,
+        orderNo:'A19025',
+        date:'01/05/2023',
+        patientName:'Baby. Anirudh',
+        hospitalId:'DH2023/0001212',
+        testName:'Anti Leukemia 1 Serum ',
+        doctorName:'Dr. Raveendran',
+        eta:'03/05/2023',
+        status:'Lab dropped',
+        tag:'error',
+    },
+    {
+        id:4,
+        orderNo:'A19026',
+        date:'01/05/2023',
+        patientName:'Sankaranarayanan Warrier',
+        hospitalId:'DH2023/0001247',
+        testName:'Comprehensive leukemia - Basic Lineage Panel',
+        doctorName:'Dr. Vignesh Muraleedharan',
+        eta:'03/05/2023',
+        status:'Ready',
+        tag:'success',
+    },
+]
+
+export const status = [
+    {
+        label:'Ready',
+        value:'Ready',
+    },
+    {
+        label:'Partial Report',
+        value:'Partial Report',
+    },
+    {
+        label:'Lab dropped',
+        value:'Lab dropped',
+    },
+]
